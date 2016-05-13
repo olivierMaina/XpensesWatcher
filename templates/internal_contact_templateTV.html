@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%select%%> and <%%endselect%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- open the generated 'internal_contact_view.php' file in your text editor and -->
+<!-- change the value of $x->ShowTableHeader to 0 -->
+
+		<td id="internal_contact-cec-<%%VALUE(id)%%>" class="internal_contact-cec "><%%SELECT%%><%%VALUE(cec)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-last_name-<%%VALUE(id)%%>" class="internal_contact-last_name "><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-first_name-<%%VALUE(id)%%>" class="internal_contact-first_name "><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-poste-<%%VALUE(id)%%>" class="internal_contact-poste "><%%SELECT%%><%%VALUE(poste)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-email-<%%VALUE(id)%%>" class="internal_contact-email "><a href="mailto:<%%VALUE(email)%%>" title="<%%VALUE(email)%%>" class="btn btn-default"><i class="glyphicon glyphicon-envelope text-info"></i></a></td>
+		<td id="internal_contact-phone-<%%VALUE(id)%%>" class="internal_contact-phone "><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-country-<%%VALUE(id)%%>" class="internal_contact-country "><%%SELECT%%><%%VALUE(country)%%><%%ENDSELECT%%></td>
+		<td id="internal_contact-info-<%%VALUE(id)%%>" class="internal_contact-info "><%%SELECT%%><%%VALUE(info)%%><%%ENDSELECT%%></td>
