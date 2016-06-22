@@ -118,18 +118,7 @@
 	function getTableList($skip_authentication = false){
 		$arrAccessTables = array();
 		$arrTables = array(   
-			// 'applications_leases' => array('Applications/Leases', 'This is the application form filled by an applicant to apply for leasing a unit. The application might be changed to a lease when approved.', 'resources/table_icons/curriculum_vitae.png'),
-			// 'residence_and_rental_history' => array('Residence and rental history', 'Records of the tenant residence and rental history.', 'resources/table_icons/document_comment_above.png'),
-			// 'employment_and_income_history' => array('Employment and income history', 'Records of the employment and income history of the tenant.', 'resources/table_icons/cash_stack.png'),
-			// 'references' => array('References', 'List of references for each tenant.', 'resources/table_icons/application_from_storage.png'),
-			// 'applicants_and_tenants' => array('Applicants and tenants', 'List of applicants/tenants and their current status. Each tenant might have an application or a lease.', 'resources/table_icons/account_balances.png'),
-			// 'properties' => array('Properties', 'Listing of all properties. Each property has an owner and consists of one or more rental units.', 'resources/table_icons/application_home.png'),
-			// 'units' => array('Units', 'Listing of all units, its details and current status.', 'resources/table_icons/change_password.png'),
-			// 'rental_owners' => array('Rental owners', 'Listing of owners of rental properties, and all the properties owned by each.', 'resources/table_icons/administrator.png'),
-			'pirl_dashboard' => array('PIRL-Dashboard', 'This is a form that allow you to record your activities.', 'resources/table_icons/Cisco.png'),
-			'external_entity' => array('External Entities', 'List all external entities.', 'resources/table_icons/application_from_storage.png'),
-			'external_contact' => array('External Contact', 'The contacts in external companies.', 'resources/table_icons/application_from_storage.png'),
-			'internal_contact' => array('Internal Contact', 'Cisco employee in charge or supporting the thread', 'resources/table_icons/Cisco.png')
+			'xpenses' => array('Xpenses', 'expenses table', 'resources/table_icons/Cisco.png')
 		);
 		if($skip_authentication || getLoggedAdmin()) return $arrTables;
 
@@ -166,7 +155,6 @@
 				'delete' => intval($row['allowDelete'])
 			);
 		}
-
 		// user-specific permissions, if specified, overwrite his group permissions
 		while($row = db_fetch_assoc($res_user)){
 			$table_permissions[$row['tableName']] = array(
@@ -196,10 +184,7 @@
 	#########################################################
 	function get_sql_fields($table_name){
 		$sql_fields = array(
-			'pirl_dashboard' => "`pirl_dashboard`.`id` as 'id',`pirl_dashboard`.`dashboard` as 'dashboard',`pirl_dashboard`.`category` as 'category', IF(    CHAR_LENGTH(`external_entity1`.`company_name`), CONCAT_WS('',   `external_entity1`.`company_name`), '') as 'external_entity_name', `pirl_dashboard`.`engagement_nature` as 'engagement_nature',`pirl_dashboard`.`engagement` as 'engagement', IF(    CHAR_LENGTH(`external_contact1`.`first_name`) || CHAR_LENGTH(`external_contact1`.`last_name`), CONCAT_WS('',   `external_contact1`.`first_name`, ' ', `external_contact1`.`last_name`), '') as 'external_contact_name',`pirl_dashboard`.`thread` as 'thread', `pirl_dashboard`.`thread_description` as 'thread_description', `pirl_dashboard`.`thread_status` as 'thread_status',if(`pirl_dashboard`.`start_date`,date_format(`pirl_dashboard`.`start_date`,'%m/%d/%Y'),'') as 'start_date', if(`pirl_dashboard`.`end_date`,date_format(`pirl_dashboard`.`end_date`,'%m/%d/%Y'),'') as 'end_date', `pirl_dashboard`.`country` as 'country', IF(    CHAR_LENGTH(`internal_contact1`.`first_name`) || CHAR_LENGTH(`internal_contact1`.`last_name`), CONCAT_WS('',   `internal_contact1`.`first_name`, ' ', `internal_contact1`.`last_name`), '') as 'internal_contact_name', `pirl_dashboard`.`usefull_info` as 'usefull_info'",   
-			'external_entity' => "`external_entity`.`id` as 'id', `external_entity`.`company_name` as 'company_name', `external_entity`.`company_name` as 'company_name', `external_entity`.`primary_email` as 'primary_email', `external_entity`.`alternate_email` as 'alternate_email', CONCAT_WS('-', LEFT(`external_entity`.`phone`,3), MID(`external_entity`.`phone`,4,3), RIGHT(`external_entity`.`phone`,4)) as 'phone', `external_entity`.`country` as 'country', `external_entity`.`street` as 'street', `external_entity`.`city` as 'city', `external_entity`.`zip` as 'zip', `external_entity`.`comments` as 'comments'",
-			'external_contact' => "`external_contact`.`id` as 'id', `external_contact`.`first_name` as 'first_name', `external_contact`.`last_name` as 'last_name', `external_contact`.`poste` as 'poste',`external_contact`.`company_name` as 'company_name',`external_contact`.`email` as 'email',CONCAT_WS('-', LEFT(`external_contact`.`phone`,3), MID(`external_contact`.`phone`,4,3), RIGHT(`external_contact`.`phone`,4)) as 'phone', CONCAT_WS('-', LEFT(`external_contact`.`alternate_phone`,3), MID(`external_contact`.`alternate_phone`,4,3), RIGHT(`external_contact`.`alternate_phone`,4)) as 'alternate_phone', `external_contact`.`country` as 'country', `external_contact`.`info` as 'info'",
-			'internal_contact' => "`internal_contact`.`id` as 'id', `internal_contact`.`cec` as 'cec',`internal_contact`.`last_name` as 'last_name', `internal_contact`.`first_name` as 'first_name', `internal_contact`.`poste` as 'poste',`internal_contact`.`email` as 'email',CONCAT_WS('-', LEFT(`external_contact`.`phone`,3), MID(`external_contact`.`phone`,4,3), RIGHT(`external_contact`.`phone`,4)) as 'phone',`external_contact`.`country` as 'country', `external_contact`.`info` as 'info'"
+			'xpenses' => "`xpenses`.`id` as 'id',if(`xpenses`.`date_depense`,date_format(`xpenses`.`date_depense`,'%m/%d/%Y'),'') as 'date_depense',`xpenses`.`montant` as 'montant', `xpenses`.`produit` as 'produit',`xpenses`.`type_payment` as 'type_payment', `xpenses`.`compte` as 'compte', `xpenses`.`categorie_produit` as 'categorie_produit', `xpenses`.`partenaire` as 'partenaire',`xpenses`.`contrib_partenaire` as 'contrib_partenaire',`xpenses`.`lieu_achat` as 'lieu_achat',`xpenses`.`raison` as 'raison',`xpenses`.`imprevu` as 'imprevu',`xpenses`.`recurrent` as 'recurrent',`xpenses`.`description` as 'description',`xpenses`.`photo` as 'photo'"   
 		);
 
 		if(isset($sql_fields[$table_name])){
@@ -211,19 +196,12 @@
 	#########################################################
 	function get_sql_from($table_name, $skip_permissions = false){
 		$sql_from = array(   
-			'pirl_dashboard' => "`pirl_dashboard`.`id` as 'id',`pirl_dashboard`.`dashboard` as 'dashboard',`pirl_dashboard`.`category` as 'category', IF(    CHAR_LENGTH(`external_entity1`.`company_name`), CONCAT_WS('',   `external_entity1`.`company_name`), '') as 'external_entity_name', `pirl_dashboard`.`engagement_nature` as 'engagement_nature',`pirl_dashboard`.`engagement` as 'engagement', IF(    CHAR_LENGTH(`external_contact1`.`first_name`) || CHAR_LENGTH(`external_contact1`.`last_name`), CONCAT_WS('',   `external_contact1`.`first_name`, ' ', `external_contact1`.`last_name`), '') as 'external_contact_name',`pirl_dashboard`.`thread` as 'thread', `pirl_dashboard`.`thread_description` as 'thread_description', `pirl_dashboard`.`thread_status` as 'thread_status',if(`pirl_dashboard`.`start_date`,date_format(`pirl_dashboard`.`start_date`,'%m/%d/%Y'),'') as 'start_date', if(`pirl_dashboard`.`end_date`,date_format(`pirl_dashboard`.`end_date`,'%m/%d/%Y'),'') as 'end_date', `pirl_dashboard`.`country` as 'country', IF(    CHAR_LENGTH(`internal_contact1`.`first_name`) || CHAR_LENGTH(`internal_contact1`.`last_name`), CONCAT_WS('',   `internal_contact1`.`first_name`, ' ', `internal_contact1`.`last_name`), '') as 'internal_contact_name', `pirl_dashboard`.`usefull_info` as 'usefull_info'",
-			'external_entity' => "`external_entity`.`id` as 'id', `external_entity`.`company_name` as 'company_name', `external_entity`.`company_name` as 'company_name', `external_entity`.`primary_email` as 'primary_email', `external_entity`.`alternate_email` as 'alternate_email', CONCAT_WS('-', LEFT(`external_entity`.`phone`,3), MID(`external_entity`.`phone`,4,3), RIGHT(`external_entity`.`phone`,4)) as 'phone', `external_entity`.`country` as 'country', `external_entity`.`street` as 'street', `external_entity`.`city` as 'city', `external_entity`.`zip` as 'zip', `external_entity`.`comments` as 'comments'",
-			'external_contact' => "`external_contact`.`id` as 'id', `external_contact`.`first_name` as 'first_name', `external_contact`.`last_name` as 'last_name', `external_contact`.`poste` as 'poste',`external_contact`.`company_name` as 'company_name',`external_contact`.`email` as 'email',CONCAT_WS('-', LEFT(`external_contact`.`phone`,3), MID(`external_contact`.`phone`,4,3), RIGHT(`external_contact`.`phone`,4)) as 'phone', CONCAT_WS('-', LEFT(`external_contact`.`alternate_phone`,3), MID(`external_contact`.`alternate_phone`,4,3), RIGHT(`external_contact`.`alternate_phone`,4)) as 'alternate_phone', `external_contact`.`country` as 'country', `external_contact`.`info` as 'info'",
-			'internal_contact' => "`internal_contact`.`id` as 'id', `internal_contact`.`cec` as 'cec',`internal_contact`.`last_name` as 'last_name', `internal_contact`.`first_name` as 'first_name', `internal_contact`.`poste` as 'poste',`internal_contact`.`email` as 'email',CONCAT_WS('-', LEFT(`external_contact`.`phone`,3), MID(`external_contact`.`phone`,4,3), RIGHT(`external_contact`.`phone`,4)) as 'phone',`external_contact`.`country` as 'country', `external_contact`.`info` as 'info'"
-		
+			'xpenses' => "`xpenses` "
 
 		);
 
 		$pkey = array(   
-			'pirl_dashboard' => 'id',
-			'external_entity' => 'id',
-			'external_contact' => "`id`",
-			'internal_contact' => "`id`"
+			'xpenses' => 'id'
 		);
 
 		if(isset($sql_from[$table_name])){

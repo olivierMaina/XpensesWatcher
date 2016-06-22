@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title><?php echo ucwords('TEAM6'); ?> | <?php echo $x->TableTitle; ?></title>
+		<title><?php echo ucwords(''); ?>  <?php echo $x->TableTitle; ?></title>
 		<link id="browser_favicon" rel="shortcut icon" href="resources/images/Cisco_sma.png">
 
 		<link rel="stylesheet" href="resources/initializr/css/bootstrap.css">

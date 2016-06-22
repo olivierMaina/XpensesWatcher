@@ -6,11 +6,8 @@
 
 	// upload paths
 	$p=array(   
-		'properties' => array(
-			'photo' => $Translation['ImageFolder'],
-			'primary key' => 'id'
-		),
-		'units' => array(
+
+		'xpenses' => array(
 			'photo' => $Translation['ImageFolder'],
 			'primary key' => 'id'
 		)

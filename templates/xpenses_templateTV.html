@@ -1,0 +1,22 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%select%%> and <%%endselect%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- open the generated 'xpenses_view.php' file in your text editor and -->
+<!-- change the value of $x->ShowTableHeader to 0 -->
+
+		<td id="xpenses-date_depense-<%%VALUE(id)%%>" class="xpenses-date_depense "><%%SELECT%%><%%VALUE(date_depense)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-montant-<%%VALUE(id)%%>" class="xpenses-montant "><%%SELECT%%><%%VALUE(montant)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-produit-<%%VALUE(id)%%>" class="xpenses-produit "><%%SELECT%%><%%VALUE(produit)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-type_payment-<%%VALUE(id)%%>" class="xpenses-type_payment "><%%SELECT%%><%%VALUE(type_payment)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-compte-<%%VALUE(id)%%>" class="xpenses-compte "><%%SELECT%%><%%VALUE(compte)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-categorie_produit-<%%VALUE(id)%%>" class="xpenses-categorie_produit "><%%SELECT%%><%%VALUE(categorie_produit)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-partenaire-<%%VALUE(id)%%>" class="xpenses-partenaire text-center"><%%SELECT%%><%%VALUE(partenaire)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-contrib_partenaire-<%%VALUE(id)%%>" class="xpenses-contrib_partenaire "><%%SELECT%%><%%VALUE(contrib_partenaire)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-lieu_achat-<%%VALUE(id)%%>" class="xpenses-lieu_achat "><%%SELECT%%><%%VALUE(lieu_achat)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-raison-<%%VALUE(id)%%>" class="xpenses-raison "><%%SELECT%%><%%VALUE(raison)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-imprevu-<%%VALUE(id)%%>" class="xpenses-imprevu "><%%SELECT%%><%%VALUE(imprevu)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-recurrent-<%%VALUE(id)%%>" class="xpenses-recurrent "><%%SELECT%%><%%VALUE(recurrent)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-description-<%%VALUE(id)%%>" class="xpenses-description "><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="xpenses-photo-<%%VALUE(id)%%>" class="xpenses-photo "><a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(photo)%%>" rel="lightbox"><img src="thumbnail.php?i=<%%VALUE(photo)%%>&t=xpenses&f=photo&v=tv" class="img-thumbnail"></a></td>
+		

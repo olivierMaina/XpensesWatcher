@@ -156,7 +156,7 @@ function getUploadDir($dir){
 	return $dir;
 }
 
-function PrepareUploadedFile($FieldName, $MaxSize, $FileTypes='jpg|jpeg|gif|png', $NoRename=false, $dir=""){
+function PrepareUploadedFile($FieldName, $MaxSize, $FileTypes='jpg|jpeg|gif|png|pdf', $NoRename=false, $dir=""){
 	global $Translation;
 	$f = $_FILES[$FieldName];
 
@@ -167,25 +167,25 @@ function PrepareUploadedFile($FieldName, $MaxSize, $FileTypes='jpg|jpeg|gif|png'
 	$last = strtolower($php_upload_size_limit[strlen($php_upload_size_limit)-1]);
 	switch($last){
 		case 'g':
-			$php_upload_size_limit *= 1024;
+			$php_upload_size_limit *= 10240;
 		case 'm':
-			$php_upload_size_limit *= 1024;
+			$php_upload_size_limit *= 10240;
 		case 'k':
-			$php_upload_size_limit *= 1024;
+			$php_upload_size_limit *= 10240;
 	}
 
 	$MaxSize = min($MaxSize, $php_upload_size_limit);
 
 	if($f['error'] != 4 && $f['name']!=''){
 		if($f['size']>$MaxSize || $f['error']){
-			echo error_message(str_replace('<MaxSize>', intval($MaxSize / 1024), $Translation['file too large']));
+			echo error_message(str_replace('<MaxSize>', intval($MaxSize / 10240), $Translation['file too large']));
 			exit;
 		}
 		if(!preg_match('/\.('.$FileTypes.')$/i', $f['name'], $ft)){
 			echo error_message(str_replace('<FileTypes>', str_replace('|', ', ', $FileTypes), $Translation['invalid file type']));
 			exit;
 		}
-
+		
 		if($NoRename){
 			$n  = str_replace(' ', '_', $f['name']);
 		}else{
@@ -209,4 +209,6 @@ function PrepareUploadedFile($FieldName, $MaxSize, $FileTypes='jpg|jpeg|gif|png'
 	}
 	return "";
 }
+
+
 ?>

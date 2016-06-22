@@ -24,6 +24,6 @@
 		'senderName' => "Membership management",
 		'senderEmail' => "omainada@cisco.com",
 		'approvalSubject' => "Your membership is now approved",
-		'approvalMessage' => "Dear member,\n\nYour membership is now approved by the admin. You can log in to your account here:\nhttp://localhost/orpm\n\nRegards,\nAdmin",
+		'approvalMessage' => "Dear member,\n\nYour membership is now approved by the admin. You can log in to your account here:\nhttp://localhost/XpenseWatcher\n\nRegards,\nAdmin",
 		'hide_twitter_feed' => ""
 	);

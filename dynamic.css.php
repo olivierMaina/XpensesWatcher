@@ -55,54 +55,22 @@ div.datePicker{ font-size: 1.3em; }
 
 img[src="blank.gif"] { max-height: 10px !important; }
 
-.pirl_dashboard-dashboard{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-category{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
-.pirl_dashboard-external_entity_name{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
-.pirl_dashboard-engagement_nature{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-engagement{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-external_contact_name{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-thread{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-thread_description{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.pirl_dashboard-thread_status{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
-.pirl_dashboard-start_date{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
-.pirl_dashboard-end_date{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
-.pirl_dashboard-country{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
-.pirl_dashboard-internal_contact_name{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.pirl_dashboard-usefull_info_name{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-date_depense{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
 
-.external_entity-id{ white-space: normal !important; max-width: 150px !important; min-width: 150px !important; overflow: hidden;  }
-.external_entity-company_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_entity-company_class{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_entity-primary_email{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden; word-break: break-all; }
-.external_entity-alternate_email{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden; word-break: break-all; }
-.external_entity-phone{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_entity-size{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
-.external_entity-country{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
-.external_entity-street{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_entity-city{ white-space: normal !important; max-width: 55px !important; min-width: 55px !important; overflow: hidden;  }
-.external_entity-zip{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
-.external_entity-comments{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
-
-.external_contact-id{ white-space: normal !important; max-width: 150px !important; min-width: 150px !important; overflow: hidden;  }
-.external_contact-first_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-last_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-poste{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-company_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-email{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden; word-break: break-all; }
-.external_contact-phone{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-alternate_phone{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.external_contact-country{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
-.external_contact-info{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
-
-.internal_contact-id{ white-space: normal !important; max-width: 150px !important; min-width: 150px !important; overflow: hidden;  }
-.internal_contact-cec{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.internal_contact-first_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.internal_contact-last_name{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.internal_contact-poste{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.internal_contact-email{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden; word-break: break-all; }
-.internal_contact-phone{ white-space: normal !important; max-width: 100px !important; min-width: 100px !important; overflow: hidden;  }
-.internal_contact-country{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
-.internal_contact-info{ white-space: normal !important; max-width: 80px !important; min-width: 80px !important; overflow: hidden;  }
+.xpenses-dashboard{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-montant{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
+.xpenses-produit{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
+.xpenses-type_payment{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-compte{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-categorie_produit{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-partenaire{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-contrib_partenaire{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
+.xpenses-lieu_achat{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
+.xpenses-raison{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
+.xpenses-imprevu{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-recurrent{ white-space: normal !important; max-width: 70px !important; min-width: 70px !important; overflow: hidden;  }
+.xpenses-description{ white-space: normal !important; max-width: 50px !important; min-width: 50px !important; overflow: hidden;  }
+.xpenses-photo{ white-space: normal !important; max-width: 60px !important; min-width: 60px !important; overflow: hidden;  }
 
 
 

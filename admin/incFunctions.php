@@ -42,10 +42,7 @@
 	if(!function_exists('getTableList')){
 		function getTableList($skip_authentication = false){
 			$arrTables = array(   
-				'pirl_dashboard' => 'Pirl Dashboard',
-				'external_entity' => 'External Entity',
-				'external_contact' => 'External Contact',
-				'internal_contact' => 'Internal Contact'
+				'xpenses' => 'Xpenses'
 			);
 
 			return $arrTables;
@@ -53,13 +50,9 @@
 	}
 	########################################################################
 	function getThumbnailSpecs($tableName, $fieldName, $view){
-		if($tableName=='properties' && $fieldName=='photo' && $view=='tv')
+		if($tableName=='xpenses' && $fieldName=='photo' && $view=='tv')
 			return array('width'=>50, 'height'=>50, 'identifier'=>'_tv');
-		elseif($tableName=='properties' && $fieldName=='photo' && $view=='dv')
-			return array('width'=>250, 'height'=>250, 'identifier'=>'_dv');
-		elseif($tableName=='units' && $fieldName=='photo' && $view=='tv')
-			return array('width'=>50, 'height'=>50, 'identifier'=>'_tv');
-		elseif($tableName=='units' && $fieldName=='photo' && $view=='dv')
+		elseif($tableName=='xpenses' && $fieldName=='photo' && $view=='dv')
 			return array('width'=>250, 'height'=>250, 'identifier'=>'_dv');
 		return FALSE;
 	}

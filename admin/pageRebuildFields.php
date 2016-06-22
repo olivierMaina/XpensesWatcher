@@ -4,61 +4,25 @@
 	include("$currDir/incHeader.php");
 
 	/* application schema as created in AppGini */
-
-		'pirl_dashboard' => array(   
+	$schema = array( 
+		'xpenses' => array(   
 			'id' => array('appgini' => 'INT unsigned not null primary key auto_increment '),
-			'dashboard' => array('appgini' => 'VARCHAR(40) not null default \'Meeting\' '),
-			'category' => array('appgini' => 'VARCHAR(40) not null default \'Investigation' '),
-			'external_entity_name' => array('appgini' => 'INT unsigned '),
-			'engagement_nature' => array('appgini' => 'VARCHAR(40) not null default \'Accelerators Partnership\' '),
-			'engagement' => array('appgini' => 'VARCHAR(40) not null default \'NA\' '),
-			'external_contact_name' => array('appgini' => 'INT unsigned '),
-			'thread' => array('appgini' => 'VARCHAR(50) '),
-			'thread_description' => array('appgini' => 'TEXT '),
-			'thread_status' => array('appgini' => 'VARCHAR(40) not null default \'Not started\' '),
-			'start_date' => array('appgini' => 'DATE '),
-			'end_date' => array('appgini' => 'DATE '),
-			'country' => array('appgini' => 'VARCHAR(40) '),
-			'internal_contact_name' => array('appgini' => 'INT unsigned '),
-			'usefull_info' => array('appgini' => 'TEXT ')
-		),
-		'external_entity' => array(   
-			'id' => array('appgini' => 'INT unsigned not null primary key auto_increment '),
-			'company_name' => array('appgini' => 'VARCHAR(40) '),
-			'company_class' => array('appgini' => 'VARCHAR(40) not null default \' D\'  '),
-			'primary_email' => array('appgini' => 'VARCHAR(40) '),
-			'alternate_email' => array('appgini' => 'VARCHAR(40) '),
-			'phone' => array('appgini' => 'VARCHAR(15) '),
-			'country' => array('appgini' => 'VARCHAR(40) '),
-			'city' => array('appgini' => 'VARCHAR(40) '),
-			'street' => array('appgini' => 'VARCHAR(40) '),
-			'zip' => array('appgini' => 'DECIMAL(15,0) '),
-			'comments' => array('appgini' => 'TEXT ')
-		
-		),
-		'external_contact' => array(   
-			'id' => array('appgini' => 'INT unsigned not null primary key auto_increment '),
-			'cec' => array('appgini' => 'VARCHAR(15) '),
-			'last_name' => array('appgini' => 'VARCHAR(15) '),
-			'first_name' => array('appgini' => 'VARCHAR(15) '),
-			'function' => array('appgini' => 'VARCHAR(15) '),
-			'company_name' => array('appgini' => 'INT unsigned '),
-			'email' => array('appgini' => 'VARCHAR(80)  '),
-			'phone' => array('appgini' => 'VARCHAR(15) '),
-			'alternate_phone' => array('appgini' => 'VARCHAR(15) '),
-			'country' => array('appgini' => 'VARCHAR(40) '),
-			'info' => array('appgini' => 'TEXT ')
-		),
-		'internal_contact' => array(   
-			'id' => array('appgini' => 'INT unsigned not null primary key auto_increment '),
-			'last_name' => array('appgini' => 'VARCHAR(15) '),
-			'first_name' => array('appgini' => 'VARCHAR(15) '),
-			'function' => array('appgini' => 'VARCHAR(15) '),
-			'email' => array('appgini' => 'VARCHAR(80)  '),
-			'phone' => array('appgini' => 'VARCHAR(15) '),
-			'country' => array('appgini' => 'VARCHAR(40) '),
-			'info' => array('appgini' => 'TEXT ')
+			'date_depense' => array('appgini' => 'DATE not null '),
+			'somme' => array('appgini' => 'DECIMAL(8,2) not null '),
+			'produit' => array('appgini' => 'VARCHAR(100) not null'),
+			'type_payment' => array('appgini' => 'VARCHAR(45) not null default  \'Carte\' '),
+			'compte' => array('appgini' => 'VARCHAR(40) not null default \'LCL\' '),
+			'categorie_produit' => array('appgini' => 'INT unsigned  \'Alimentation\' '),
+			'partenaire' => array('appgini' => 'VARCHAR(45) not null default '),
+			'contrib_partenaire' => array('appgini' => 'DECIMAL(4,2) '),
+			'lieu_achat' => array('appgini' => 'VARCHAR(40) not null default  '),
+			'raison' => array('appgini' => 'VARCHAR(40) not null default  '),
+			'imprevu' => array('appgini' => 'VARCHAR(5) not null default \'No\' '),
+			'recurrent' => array('appgini' => 'VARCHAR(5) not null default \'No\' '),
+			'description' => array('appgini' => 'TEXT '),
+			'photo' => array('appgini' => 'VARCHAR(40) ')
 		)
+
 	);
 
 	$table_captions = getTableList();

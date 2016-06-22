@@ -6,12 +6,10 @@
 
 	// image paths
 	$p=array(   
-		'properties' => array(
-			'photo' => $Translation['ImageFolder']
-		),
-		'units' => array(
+		'xpenses' => array(
 			'photo' => $Translation['ImageFolder']
 		)
+		
 	);
 
 	if(!count($p)) exit;
@@ -25,7 +23,7 @@
 	// validate input
 	if(!in_array($t, array_keys($p)))  getImage();
 	if(!in_array($f, array_keys($p[$t])))  getImage();
-	if(!preg_match('/^[a-z0-9_]+\.(gif|png|jpg|jpeg|jpe)$/i', $i, $m)) getImage();
+	if(!preg_match('/^[a-z0-9_]+\.(gif|png|jpg|jpeg|jpe|pdf)$/i', $i, $m)) getImage();
 	if($v!='tv' && $v!='dv')   getImage();
 
 	$img=$p[$t][$f].$i;

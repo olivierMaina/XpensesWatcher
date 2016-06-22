@@ -5,12 +5,16 @@
 
 	// image paths
 	$p=array(   
-		'properties' => array(
-			'photo' => '../images/'
-		),
-		'units' => array(
-			'photo' => '../images/'
-		)
+		// 'properties' => array(
+		// 	'photo' => '../images/'
+		// ),
+		// 'units' => array(
+		// 	'photo' => '../images/'
+		// )
+
+		 'pirl_dashboard' => array(
+		 	'photo' => '../images/'
+		 )
 	);
 
 	if(!count($p)) exit;

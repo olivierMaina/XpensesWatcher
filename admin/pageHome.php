@@ -227,7 +227,7 @@
 			<h3>
 				Tweets By BigProf Software
 				<span class="pull-right">
-					<a class="twitter-follow-button" href="https://twitter.com/bigprof" data-show-count="false" data-lang="en">Follow @bigprof</a>
+					<a class="twitter-follow-button" href="https://twitter.com/Cisco" data-show-count="false" data-lang="en">Follow @bCisco</a>
 					<script type="text/javascript">
 						window.twttr = (function (d, s, id) {
 							var t, js, fjs = d.getElementsByTagName(s)[0];
@@ -241,7 +241,7 @@
 				</span>
 			</h3><hr>
 			<div class="text-center">
-				<a class="twitter-timeline" height="400" href="https://twitter.com/bigprof" data-widget-id="552758720300843008" data-chrome="nofooter noheader">Loading @bigprof feed ...</a>
+				<a class="twitter-timeline" height="400" href="https://twitter.com/Cisco" data-widget-id="732330151464321024" data-chrome="nofooter noheader">Loading @Cisco feed ...</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</div>
 			<div class="text-right hidden" id="remove-feed-link"><a href="pageSettings.php#hide_twitter_feed"><i class="glyphicon glyphicon-remove"></i> Remove this feed</a></div>

@@ -31,40 +31,7 @@
 
 	// drop-downs config
 	$lookups = array(
-		'pirl_dashboard' => array(   
-			'external_entity_name' => array(
-				'parent_table' => 'external_entity',
-				'parent_pk_field' => 'id',
-				'parent_caption' => '`external_entity`.`company_name`',
-				'parent_from' => '`external_entity`',
-				'filterers' => array(),
-				'custom_query' => '',
-				'inherit_permissions' => false,
-				'list_type' => 0,
-				'not_null' => false
-			),
-			'external_contact_name' => array(
-				'parent_table' => 'external_contact',
-				'parent_pk_field' => 'id',
-				'parent_caption' => 'IF(CHAR_LENGTH(`external_contact`.`first_name`) || CHAR_LENGTH(`external_contact`.`last_name`), CONCAT_WS(\'\', `external_contact`.`first_name`, \' \', `external_contact`.`last_name`), \'\')',
-				'parent_from' => '`external_contact`',/* LEFT JOIN `external_entity` as external_entity1 ON `external_entity1`.`id`=`external_contact`.`company_name` ',*/
-				'filterers' => array(),
-				'custom_query' => '',
-				'inherit_permissions' => false,
-				'list_type' => 0,
-				'not_null' => false
-			),
-			'internal_contact_name' => array(
-				'parent_table' => 'internal_contact',
-				'parent_pk_field' => 'id',
-				'parent_caption' => 'IF(CHAR_LENGTH(`internal_contact`.`first_name`) || CHAR_LENGTH(`internal_contact`.`last_name`), CONCAT_WS(\'\', `internal_contact`.`first_name`, \' \', `internal_contact`.`last_name`), \'\')',
-				'parent_from' => '`internal_contact`',
-				'filterers' => array(),
-				'custom_query' => '',
-				'inherit_permissions' => false,
-				'list_type' => 0,
-				'not_null' => false
-			)
+		'xpenses' => array(   
 		)
 			
 	);
